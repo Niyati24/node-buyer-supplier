@@ -1,0 +1,14 @@
+extends layout
+
+block content
+   h1= title
+   form#formAddUser(name="addreq",method="post",action="addreq")
+    input(type="hidden", name="_method", valur="PUT")
+    p material specification
+     input#inputUserName(type="text", placeholder="material specification", name="materialspec")
+    p quantity
+     input#inputUserEmail(type="text", placeholder="quantity", name="quantity")
+    p quality
+     input#inputUserEmail2(type="text", placeholder="quality", name="quality")
+    p 
+     button#btnSubmit(type="submit") submit

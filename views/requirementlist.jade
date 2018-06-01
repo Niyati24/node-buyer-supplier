@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1.
+    Requirement List
+  table
+    thead
+      tr
+        th Material Specification
+        th Quantity
+        th Quality
+    tbody
+      each requ, i in requirementlist
+        tr
+          td 
+            a(href="mailto:#{requ.materialspec}")= requ.materialspec
+          td #{requ.quantity} 
+          td #{requ.quality} 

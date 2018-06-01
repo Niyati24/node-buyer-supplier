@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p #{title} Listing
+
+  table
+    thead
+      tr
+        th Material Specification
+        th Quantity
+        th Quality
+    tbody
+      each requ, i in requirementlist
+        tr
+          td =requ.materialspec
+          td = requ.quantity
+          td = requ.quality
